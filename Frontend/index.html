@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComTechClub</title>
+    <link rel="stylesheet" href="src/styles/index.css">
+    <link rel="icon" href="src/images/logo.webp" type="image/x-icon">
+</head>
+<body>
+    <div id="loadingScreen">
+        <img src="src/images/logo.webp" alt="Loading...">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+    <header>
+        <div class="nav-container">
+            <a href="" class="logo">
+                <img src="src/images/logo.webp" alt="COMTECH Logo">
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                &#9776;
+            </button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="members">Members</a></li>
+                    <li><a href="Information">Information</a></li>
+                    <li><a href="News">News</a></li>                   
+                    <li><a href="Contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Welcome to <span>COMTECH</span></h1>
+            <button id="applyButton">Apply now</button>
+        </section>
+        
+        <section class="about">
+            <h2>What is</h2>
+            <h2>COMTECH?</h2>
+            <p>
+                <span>COMTECH is a computer and technology club which specialize on using</span>
+                <span>computer performance and technology for maximum benefit,</span>
+                <span>established at Kasetsart University Laboratory School</span>
+                <span>since 2011.</span>
+            </p>
+            <p>
+                <span>We focus on people who’s interested in technology, from learning to</span>
+                <span>work as a team, develop logical thinking and adapt to use in future life,</span>
+                <span>learn to find solutions to problems while working and adjust to use in</span>
+                <span>their daily life.</span>
+            </p>
+
+            <div class="video-container">
+                <iframe id="youtube-video" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+
+            <h3>Our Activity</h3> 
+            <p>For more information about the activity you could visit our instragram.</p>
+            <div class="button-container"></div>
+            <button id="Instragram">Instragram</button>
+
+            <h3>Members</h3> 
+            <p>For announcements of selected club members and to view the previous members.</p>
+            <button onclick="window.location.href='members';">Members</button>
+
+            <h3>Expand Vision & Try-New Thing</h3> 
+            <p>From coding, engineering and designing, we welcome you to join us and gather experience and apply in the future. With passion, everything is possible</p>
+
+            <h3>Our Social media</h3> 
+            <div class="button-container">
+                <a href='Instragram' id="Instragram" class="button instagram">
+                    <img src="src/images/instagram_icon.webp" alt="Instagram">
+                    <span>Instagram</span>
+                </a>
+                <a href='Facebook' class="button facebook">
+                    <img src="src/images/facebook_icon.webp" alt="Facebook">
+                    <span>Facebook</span>
+                </a>
+                <a href='YouTube' class="button youtube">
+                    <img src="src/images/youtube_icon.webp" alt="YouTube">
+                    <span>YouTube</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="src/images/logo.webp" alt="ComTechClub Logo">
+        <div class="footer-content">
+            <p>&copy; 2024 ComTechClub. All rights reserved.<br>
+            KASETSART UNIVERSITY LABORATORY SCHOOL<br>
+            <span class="separator"></span>
+            COMTECH ROOM<br>
+            FABLAB KASETSART UNIVERSITY SCHOOL<br>
+            BUILDING 6<br>
+            BANGKOK, THAILAND
+            </p>
+            <a href="https://github.com/Bhumipat001/ComTech-Website" class="github-link">
+                <img src="src/images/github_icon.svg" alt="GitHub Logo" class="github-logo">
+                <span>Source Code</span>
+            </a>
+        </div>
+    </footer>
+
+    <script type="module" src="src/scripts/index.js"></script>
+</body>
+</html>

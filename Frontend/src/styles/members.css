@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000000, #2c0049);
+    display: flex;
+    flex-direction: column;
+    min-height: 200vh;
+}
+.container {
+    text-align: center;
+    padding-top: 40px;
+    flex: 1;
+}
+.group-container {
+    margin-bottom: 20px;
+}
+.group-title {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.card {
+    border: 1px solid #3c393d;
+    border-radius: 5px;
+    padding: 32px;
+    margin: 16px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: inline-block;
+    width: 210px;
+    background-color: #1d1d1d;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    animation: slideUp 0.5s ease-out;
+}
+.card img {
+    border-radius: 5px;
+    max-width: 100%;
+    width: 260px;
+    height: 210px;
+    object-fit: cover;
+}
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    padding: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #7F5283;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+.home-button img {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+.home-button:hover {
+    background-color: #777;
+}
+footer {
+    text-align: center;
+    background-color: #61003046;
+    padding: 20px;
+}
+footer img {
+    width: 50px;
+    height: auto;
+    opacity: 0.4;
+}
+.footer-content {
+    color: #666;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.footer-content .separator {
+    display: block;
+    height: 1px;
+    background-color: #666;
+    border: none;
+    margin: 20px auto;
+    width: 100%;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#loadingScreen {
+    display: none;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+#loadingScreen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #fff;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+#loadingScreen img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 100px;
+    animation: breathing 2s infinite, logoSize 1s forwards;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 20px;
+    background: #00000000;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 0px;
+    padding: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255);
+    border-radius: 0px;
+    transition: width 0.5s;
+}
+
+@keyframes breathing {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes logoSize {
+    0% {
+        width: 200px;
+        height: 200px;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.github-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 1px;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
+
+.github-link {
+    color: #551b8c;
+    text-decoration: none;
+}
+
+.github-link:hover {
+    color: #777777;
+    text-decoration: none;
+}
