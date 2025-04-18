@@ -65,10 +65,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 import { indexDataBase } from './config.js';
-function decryptBase64(encoded) {
+function decrypt(encoded) {
   return atob(encoded);
 }
-const DataBase = decryptBase64(indexDataBase);
+const DataBase = decrypt(indexDataBase);
 document.addEventListener("DOMContentLoaded", function() {
   const loadingScreen = document.getElementById('loadingScreen');
   const progressBar = document.querySelector('.progress');

@@ -1,5 +1,4 @@
 const defaultPicture = new URL('../images/logo_background.png', import.meta.url).href;
-
 function showLoadingScreen() {
   const loadingScreen = document.getElementById('loadingScreen');
   const progressBar = document.querySelector('.progress');
@@ -24,10 +23,10 @@ function hideLoadingScreen() {
   }, 500);
 }
 import { membersDataBase } from './config.js';
-function decryptBase64(encoded) {
+function decrypt(encoded) {
   return atob(encoded);
 }
-const DataBase = decryptBase64(membersDataBase);
+const DataBase = decrypt(membersDataBase);
 async function fetchData() {
   showLoadingScreen();
   try {
@@ -40,10 +39,8 @@ async function fetchData() {
     const data = await response.json();
     const groups = {};
 
-    // Process each category in the JSON data
     Object.entries(data).forEach(([group, membersList]) => {
       membersList.forEach(member => {
-        // Convert KUS to CTC group if applicable
         if (member["KUS"] !== undefined) {
           const ctcGroup = `CTC${member["KUS"] - 38}`;
           if (!groups[ctcGroup]) {
@@ -83,18 +80,16 @@ async function fetchData() {
 
 function displayCards(groups) {
   const container = document.getElementById('grouped-cards');
-  container.innerHTML = ""; // Clear previous content
+  container.innerHTML = "";
 
-  // Sorting logic:
   const sortedGroupNames = Object.keys(groups)
-    .filter(group => groups[group].length > 0) // 🔥
+    .filter(group => groups[group].length > 0)
     .sort((a, b) => {
       if (a === "Supervisors") return -1;
       if (b === "Supervisors") return 1;
       if (a === "President & Vice president") return -1;
       if (b === "President & Vice president") return 1;
 
-      // Sort CTC groups numerically in descending order (higher KUS first)
       const numA = parseInt(a.replace("CTC", ""), 10);
       const numB = parseInt(b.replace("CTC", ""), 10);
       return numB - numA;
