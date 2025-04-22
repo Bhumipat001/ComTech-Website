@@ -1,4 +1,4 @@
-const defaultPicture = new URL('../images/logo_background.png', import.meta.url).href;
+const defaultPicture = new URL('../images/logo_background.webp', import.meta.url).href;
 function showLoadingScreen() {
   const loadingScreen = document.getElementById('loadingScreen');
   const progressBar = document.querySelector('.progress');
